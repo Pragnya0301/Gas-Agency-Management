@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Booking Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <section id="auth-section">
+            <h1>Gas Booking System</h1>
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Password">
+            <div class="actions">
+                <button onclick="handleLogin()">Login</button>
+                <button onclick="handleRegister()" class="secondary">Register</button>
+            </div>
+        </section>
+
+        <section id="user-dashboard" style="display:none;">
+            <h2>Welcome, <span id="user-display-email"></span></h2>
+            <div class="quota-card">
+                <p>Annual Quota Remaining</p>
+                <h1 id="barrel-count">12</h1>
+            </div>
+            <button class="book-btn" onclick="requestBooking()">Book Cylinder Now</button>
+            <div id="notice-board"></div>
+        </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
